@@ -170,9 +170,23 @@ img {
 
 .submenu a:hover,
 .nav-item > a:hover,
-.section-links a:hover,
-.site-footer a:hover {
-  color: var(--navy-soft);
+.section-links a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.site-footer nav a,
+.site-footer .contact-facts a {
+  border-radius: 0.15rem;
+  padding: 0.05rem 0.25rem;
+  margin-inline: -0.25rem;
+}
+
+.site-footer nav a:hover,
+.site-footer .contact-facts a:hover {
+  color: var(--navy);
+  background: var(--white);
 }
 
 .tour-link {
