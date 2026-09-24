@@ -306,9 +306,96 @@ img {
 }
 
 .page p {
-  max-width: 40rem;
-  margin: 0;
+  max-width: 42rem;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.prose h2,
+.prose h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.7rem;
+}
+
+.prose h2:first-child,
+.with-photo .prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  margin: 1.4rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  max-width: 42rem;
+}
+
+.prose li {
+  margin: 0.4rem 0;
+}
+
+.prose table {
+  width: min(100%, 46rem);
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+}
+
+.prose caption {
+  caption-side: bottom;
+  padding-top: 0.5rem;
+  text-align: left;
   color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose th {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.epigraph {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+}
+
+.with-photo {
+  display: grid;
+  grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+  gap: 2rem 2.5rem;
+  align-items: start;
+}
+
+.with-photo .page-photo-portrait {
+  position: sticky;
+  top: 6.5rem;
+  margin: 0;
+  max-width: none;
+}
+
+.photo-row p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .section-links {
@@ -418,5 +505,15 @@ img {
   .photo-row img {
     aspect-ratio: 4 / 5;
     max-height: 28rem;
+  }
+
+  .with-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .with-photo .page-photo-portrait {
+    position: static;
+    order: -1;
+    max-width: 24rem;
   }
 }

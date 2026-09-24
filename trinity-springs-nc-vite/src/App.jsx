@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Link from './components/Link'
 import { findRoute } from './navigation'
+import PageBody from './page-content'
 import { pageMedia } from './photos'
 import { usePath } from './path-context'
 import PathProvider from './router'
@@ -49,40 +50,25 @@ function Page() {
         </section>
       )}
       {!isHome && (
-      <div className="page">
-        <h1>{route.title}</h1>
-        <p>{route.summary}</p>
-        {media?.wide && (
-          <figure className="page-photo page-photo-wide">
-            <img src={media.wide.src} alt={media.wide.alt} />
-          </figure>
-        )}
-        {media?.portrait && (
-          <figure className="page-photo page-photo-portrait">
-            <img src={media.portrait.src} alt={media.portrait.alt} />
-          </figure>
-        )}
-        {media?.stages && (
-          <div className="photo-row">
-            {media.stages.map((stage) => (
-              <figure key={stage.label}>
-                <img src={stage.src} alt={stage.alt} />
-                <figcaption>{stage.label}</figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
-        {route.children && (
-          <ul className="section-links">
-            {route.children.map((child) => (
-              <li key={child.path}>
-                <Link to={child.path}>{child.title}</Link>
-              </li>
-            ))}
-          </ul>
-        )}
-        {route.contact && <ContactFacts />}
-      </div>
+        <div className="page">
+          <h1>{route.title}</h1>
+          <PageBody path={route.path} media={media} />
+          {route.children && (
+            <ul className="section-links">
+              {route.children.map((child) => (
+                <li key={child.path}>
+                  <Link to={child.path}>{child.title}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {route.contact && <ContactFacts />}
+        </div>
+      )}
+      {isHome && (
+        <div className="page">
+          <PageBody path={route.path} media={media} />
+        </div>
       )}
     </main>
   )
