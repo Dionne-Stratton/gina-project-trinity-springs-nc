@@ -60,28 +60,53 @@ img {
 .brand {
   display: flex;
   align-items: center;
+  min-width: 0;
   text-decoration: none;
+}
+
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
 }
 
 .logo {
   display: block;
-  height: 4.75rem;
-  aspect-ratio: 2130 / 2804;
-  overflow: hidden;
-  position: relative;
+  width: 4.25rem;
+  height: 4.25rem;
   flex: none;
 }
 
 .logo img {
-  position: absolute;
-  width: calc(100% * 3091 / 2130);
-  height: calc(100% * 4000 / 2804);
-  max-width: none;
-  left: calc(100% * -409 / 2130);
-  top: calc(100% * -495 / 2804);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.site-header .brand-name {
+  color: var(--navy);
+}
+
+.site-footer .brand-name {
+  color: #f3efe8;
+  font-size: 1.45rem;
 }
 
 .logo-hero {
+  width: 11rem;
   height: 11rem;
   margin-bottom: 1.5rem;
 }
@@ -132,9 +157,10 @@ img {
 
 .nav-item > a {
   display: block;
-  padding: 0.7rem 0.65rem;
+  padding: 0.7rem 0.5rem;
   color: var(--ink);
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .nav-item.is-current > a,
@@ -231,24 +257,24 @@ img {
   z-index: 1;
   width: min(1120px, calc(100% - 2rem));
   margin-inline: auto;
-  padding: 4.5rem 0 2.5rem;
+  padding: 4.5rem 2.5rem 2.5rem;
   color: var(--white);
   background: linear-gradient(transparent, rgba(13, 19, 91, 0.82) 42%);
 }
 
 .hero-copy h1 {
   margin: 0 0 0.6rem;
-  max-width: 16ch;
   font-family: var(--serif);
   font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 500;
   line-height: 1.05;
+  text-wrap: balance;
 }
 
 .hero-copy p {
-  max-width: 34rem;
   margin: 0;
   color: #f6f3ee;
+  text-wrap: pretty;
 }
 
 .hero .tour-link {
@@ -466,10 +492,20 @@ img {
 }
 
 .site-footer .logo {
-  height: 5.5rem;
+  width: 5.25rem;
+  height: 5.25rem;
 }
 
 @media (max-width: 1080px) {
+  .logo {
+    width: 3.35rem;
+    height: 3.35rem;
+  }
+
+  .site-header .brand-name {
+    font-size: 1.05rem;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
@@ -529,5 +565,33 @@ img {
     position: static;
     order: -1;
     max-width: 24rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-bar {
+    gap: 0.65rem;
+  }
+
+  .logo-lockup {
+    gap: 0.5rem;
+  }
+
+  .site-header .logo {
+    width: 2.85rem;
+    height: 2.85rem;
+  }
+
+  .site-header .brand-name {
+    font-size: 0.92rem;
+  }
+
+  .site-footer .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .site-footer .brand-name {
+    font-size: 1.15rem;
   }
 }

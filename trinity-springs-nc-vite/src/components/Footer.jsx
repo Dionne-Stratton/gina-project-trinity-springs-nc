@@ -12,11 +12,7 @@ export default function Footer() {
           <Link to="/" className="brand">
             <Logo />
           </Link>
-          <p>
-            {organization.name}
-            <br />
-            Est. {organization.established}
-          </p>
+          <p>Est. {organization.established}</p>
         </div>
         <nav aria-label="Footer">
           <p className="footer-heading">Explore</p>
