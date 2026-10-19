@@ -34,6 +34,9 @@ function Page() {
 
   const media = pageMedia[route.path]
   const isHome = route.path === '/'
+  const isTopLevel = !isHome && route.path.split('/').filter(Boolean).length === 1
+  const headerPhoto = isTopLevel ? (media?.wide ?? media?.portrait) : null
+  const bodyMedia = headerPhoto ? { ...media, wide: null, portrait: null } : media
 
   return (
     <main className="site-main">
@@ -49,10 +52,19 @@ function Page() {
           </div>
         </section>
       )}
+      {headerPhoto && (
+        <section className="hero page-header">
+          <img src={headerPhoto.src} alt={headerPhoto.alt} />
+          <div className="hero-copy">
+            <h1>{route.title}</h1>
+            <p>{route.summary}</p>
+          </div>
+        </section>
+      )}
       {!isHome && (
         <div className="page">
-          <h1>{route.title}</h1>
-          <PageBody path={route.path} media={media} />
+          {!headerPhoto && <h1>{route.title}</h1>}
+          <PageBody path={route.path} media={bodyMedia} />
           {route.children && (
             <ul className="section-links">
               {route.children.map((child) => (
