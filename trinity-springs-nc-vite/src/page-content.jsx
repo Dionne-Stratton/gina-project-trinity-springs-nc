@@ -743,23 +743,7 @@ function FamiliesBody() {
 }
 
 function ContactBody() {
-  return (
-    <>
-      <p>
-        The campus tour and family interview are the first step for a family considering
-        enrollment. Applications may be emailed to{' '}
-        <a href={`mailto:${organization.applicationEmail}`}>
-          {organization.applicationEmail}
-        </a>
-        .
-      </p>
-      <p>
-        {organization.applicationEmail} is the TSCA email address. Families
-        interested in teaching can note that on the family interest form, and Trinity
-        Springs will contact them.
-      </p>
-    </>
-  )
+  return null
 }
 
 export default function PageBody({ path, media }) {
