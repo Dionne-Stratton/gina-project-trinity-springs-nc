@@ -495,6 +495,12 @@ function CommunityBody() {
 function FamiliesBody() {
   return (
     <>
+      <h2>Mailing address</h2>
+      <p>
+        {organization.mailingStreet}
+        <br />
+        {organization.mailingCity}
+      </p>
       <h2>2026–2027 academic calendar</h2>
       <p>
         The calendar distinguishes school-at-home days, on-campus days, Friday
