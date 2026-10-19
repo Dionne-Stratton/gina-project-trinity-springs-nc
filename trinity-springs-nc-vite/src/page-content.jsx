@@ -94,12 +94,14 @@ function AboutBody() {
         Trinity Springs Christian Academy was established in 2023. It is a
         Christ-centered classical homeschool hybrid program and a 501(c)(3) nonprofit.
       </p>
+      <h2>Mission</h2>
       <p>
-        Its mission is to bring glory to God through helping homeschool families
-        develop the faith, character, and intellect of their children through
-        Christ-centered classical instruction. Its vision is to make homeschooling
-        accessible to families in our community.
+        To bring glory to God through helping homeschool families develop the faith,
+        character, and intellect of their children through Christ-centered classical
+        instruction.
       </p>
+      <h2>Vision</h2>
+      <p>To make homeschooling accessible to families in our community.</p>
     </>
   )
 }
