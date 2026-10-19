@@ -6,26 +6,35 @@ function normalize(path) {
   return path.endsWith('/') ? path.slice(0, -1) : path
 }
 
+function currentLocation() {
+  return {
+    path: normalize(window.location.pathname),
+    search: window.location.search,
+  }
+}
+
 export default function PathProvider({ children }) {
-  const [path, setPath] = useState(() => normalize(window.location.pathname))
+  const [location, setLocation] = useState(currentLocation)
 
   useEffect(() => {
-    const sync = () => setPath(normalize(window.location.pathname))
+    const sync = () => setLocation(currentLocation())
     window.addEventListener('popstate', sync)
     return () => window.removeEventListener('popstate', sync)
   }, [])
 
   function navigate(to) {
-    const next = normalize(to)
-    if (next !== normalize(window.location.pathname)) {
-      window.history.pushState({}, '', next)
+    const next = new URL(to, window.location.href)
+    const destination = normalize(next.pathname) + next.search + next.hash
+    const current = normalize(window.location.pathname) + window.location.search + window.location.hash
+    if (destination !== current) {
+      window.history.pushState({}, '', destination)
     }
-    setPath(next)
+    setLocation(currentLocation())
     window.scrollTo(0, 0)
   }
 
   return (
-    <PathContext.Provider value={{ path, navigate }}>
+    <PathContext.Provider value={{ path: location.path, search: location.search, navigate }}>
       {children}
     </PathContext.Provider>
   )
