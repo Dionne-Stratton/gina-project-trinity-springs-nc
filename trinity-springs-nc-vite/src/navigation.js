@@ -56,7 +56,7 @@ export const routes = [
       },
       {
         path: '/admissions/tuition',
-        title: 'Tuition & Fees',
+        title: '2026–2027 Tuition & Fees',
         summary: 'The cost of the program.',
       },
     ],
