@@ -180,6 +180,19 @@ function FaithBody() {
   )
 }
 
+function EmploymentVolunteerBody() {
+  return (
+    <p>
+      Interested in working or volunteering with Trinity Springs Christian Academy?
+      Please email{' '}
+      <a href={`mailto:${organization.applicationEmail}`}>
+        {organization.applicationEmail}
+      </a>{' '}
+      to express your interest.
+    </p>
+  )
+}
+
 function LeadershipBody() {
   return (
     <>
@@ -816,6 +829,9 @@ export default function PageBody({ path, media }) {
       break
     case '/about/statement-of-faith':
       copy = <FaithBody />
+      break
+    case '/about/employment-volunteer':
+      copy = <EmploymentVolunteerBody />
       break
     case '/about/leadership':
       copy = <LeadershipBody />
