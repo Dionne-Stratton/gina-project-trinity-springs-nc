@@ -26,10 +26,6 @@ export default function ContactFacts() {
         <a href={organization.facebook} target="_blank" rel="noreferrer">
           Facebook {organization.facebookLabel}
         </a>
-        <br />
-        <a href={organization.instagram} target="_blank" rel="noreferrer">
-          Instagram {organization.instagramLabel}
-        </a>
       </p>
     </address>
   )
