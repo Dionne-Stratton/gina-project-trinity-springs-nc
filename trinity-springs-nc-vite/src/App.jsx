@@ -43,7 +43,7 @@ function Page() {
           <div className="hero-copy">
             <h1>Trinity Springs Christian Academy</h1>
             <p>{route.summary}</p>
-            <Link to="/contact" className="tour-link">
+            <Link to="/contact?reason=tour" className="tour-link">
               Schedule a Tour
             </Link>
           </div>
