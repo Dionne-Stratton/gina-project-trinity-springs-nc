@@ -11,7 +11,9 @@ export default function ContactFacts() {
         {organization.city}
       </p>
       <p>
-        <a href={organization.phoneHref}>{organization.phone}</a>
+        <a href={organization.phoneHref}>Call {organization.phone}</a>
+        <br />
+        <a href={organization.phoneHref.replace('tel:', 'sms:')}>Text us</a>
         <br />
         <a href={`mailto:${organization.applicationEmail}`}>
           {organization.applicationEmail}
