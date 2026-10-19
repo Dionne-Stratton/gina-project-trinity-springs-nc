@@ -602,3 +602,40 @@ img {
     font-size: 1.15rem;
   }
 }
+
+.prose .enrollment-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: none;
+  padding: 0;
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.enrollment-steps li {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.enrollment-steps svg {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--navy);
+}
+
+.enrollment-steps h3 {
+  margin-top: 1rem;
+}
+
+.enrollment-steps p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .prose .enrollment-steps {
+    grid-template-columns: 1fr;
+  }
+}
