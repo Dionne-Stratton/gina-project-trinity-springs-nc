@@ -231,6 +231,12 @@ function ProgramBody() {
         Class sizes are small, with a maximum of 6–10 students depending on the grade.
         Lesson plans are provided for each class for five days of instruction.
       </p>
+      <h2>Analog learning</h2>
+      <p>
+        We are proud to be an analog learning program. TSCA uses screens minimally in
+        planned instruction, preferring books, conversation, and hands-on learning to
+        take priority over digital instruction.
+      </p>
     </>
   )
 }
