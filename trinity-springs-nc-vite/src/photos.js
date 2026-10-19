@@ -1,3 +1,4 @@
+import campusExterior from './assets/campus-exterior.jpg'
 import classroomTable from './assets/818597816_1555205939224935_1524415522943999201_n.jpg'
 import handwriting from './assets/818611448_1094038653014789_889285802551922317_n.jpg'
 import handsOnScience from './assets/818729203_2291075288959281_5130815639976803485_n.jpg'
@@ -8,7 +9,6 @@ import smilingClass from './assets/820430374_2379092629163151_790013859726416301
 import historyStudy from './assets/821122672_1080796731596888_4367899446024982362_n.jpg'
 import smilingStudent from './assets/821264282_1351903953443559_5677763745483897309_n.jpg'
 import teacherMicroscope from './assets/821404083_1401974115375910_6987429257086497128_n.jpg'
-import classroomWide from './assets/821478008_1676740604079515_3830696394146763961_n.jpg'
 import kindergarten from './assets/824944980_980737055060256_3716327741319941158_n.jpg'
 import smallGroup from './assets/825237782_1564408321606583_6801364599214242274_n.jpg'
 
@@ -21,8 +21,8 @@ export const pageMedia = {
   },
   '/about': {
     wide: {
-      src: classroomWide,
-      alt: 'A classroom with students at their desks and teachers nearby',
+      src: campusExterior,
+      alt: 'Exterior of Shallow Well Church, the Trinity Springs Christian Academy campus',
     },
   },
   '/about/mission-vision': {
