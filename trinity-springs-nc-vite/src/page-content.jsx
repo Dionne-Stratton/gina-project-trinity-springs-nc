@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { usePath } from './path-context'
 import { organization } from './contact'
 import Link from './components/Link'
 import { pageMedia } from './photos'
@@ -82,7 +83,7 @@ function HomeBody() {
       <p>
         <Link to="/admissions/process">Read the enrollment steps</Link>
         {' · '}
-        <Link to="/contact">Schedule a tour</Link>
+        <Link to="/contact?reason=tour">Schedule a tour</Link>
       </p>
     </div>
   )
@@ -439,7 +440,7 @@ function ProcessBody() {
         .
       </p>
       <p>
-        <Link to="/contact" className="tour-link">Apply Now</Link>
+        <Link to="/contact?reason=apply" className="tour-link">Apply Now</Link>
       </p>
       <h2>3. Acceptance and enrollment</h2>
       <p>
@@ -455,7 +456,7 @@ function ProcessBody() {
       </p>
       <h2>Have questions?</h2>
       <p>
-        <Link to="/contact" className="tour-link">Ask Us</Link>
+        <Link to="/contact?reason=question" className="tour-link">Ask Us</Link>
       </p>
     </>
   )
@@ -877,7 +878,16 @@ function FamiliesBody() {
 }
 
 function ContactBody() {
-  const [reason, setReason] = useState('question')
+  const { search = '' } = usePath()
+  const requestedReason = new URLSearchParams(search).get('reason')
+  const initialReason = ['tour', 'apply', 'question'].includes(requestedReason)
+    ? requestedReason
+    : 'question'
+  return <ContactForm key={search} initialReason={initialReason} />
+}
+
+function ContactForm({ initialReason }) {
+  const [reason, setReason] = useState(initialReason)
 
   return (
     <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
