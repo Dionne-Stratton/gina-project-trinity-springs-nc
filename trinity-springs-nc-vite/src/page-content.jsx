@@ -499,6 +499,20 @@ function CommunityBody() {
 function FamiliesBody() {
   return (
     <>
+      <h2>ClassReach</h2>
+      <p>
+        Access classroom information, official communications, and invoicing through
+        your individual ClassReach login.
+      </p>
+      <p>
+        <a
+          href="https://trinityspringschristianacademy.classreach.com/Login"
+          target="_blank"
+          rel="noreferrer"
+        >
+          ClassReach login
+        </a>
+      </p>
       <h2>Mailing address</h2>
       <p>
         {organization.mailingStreet}
