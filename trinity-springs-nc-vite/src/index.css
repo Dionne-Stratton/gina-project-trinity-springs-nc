@@ -252,6 +252,14 @@ img {
   object-position: center 62%;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(13, 19, 91, 0.82) 72%);
+  pointer-events: none;
+}
+
 .hero-copy {
   position: relative;
   z-index: 1;
@@ -259,7 +267,6 @@ img {
   margin-inline: auto;
   padding: 4.5rem 2.5rem 2.5rem;
   color: var(--white);
-  background: linear-gradient(transparent, rgba(13, 19, 91, 0.82) 42%);
 }
 
 .hero-copy h1 {
