@@ -731,3 +731,25 @@ img {
   opacity: 0.55;
   cursor: not-allowed;
 }
+
+.page-header {
+  min-height: 24rem;
+}
+
+.page-header img {
+  object-position: center 40%;
+}
+
+.page-header .hero-copy {
+  padding: 6rem 1.5rem 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    min-height: 18rem;
+  }
+
+  .page-header .hero-copy {
+    padding-inline: 0.5rem;
+  }
+}
