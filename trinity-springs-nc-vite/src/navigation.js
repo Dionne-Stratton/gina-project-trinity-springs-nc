@@ -16,6 +16,11 @@ export const routes = [
         summary: 'Why Trinity Springs exists and what it hopes to make possible.',
       },
       {
+        path: '/about/employment-volunteer',
+        title: 'Employment & Volunteer',
+        summary: 'Express your interest in working or volunteering with Trinity Springs.',
+      },
+      {
         path: '/about/leadership',
         title: 'Organization',
         summary: 'How the academy is organized and led.',
