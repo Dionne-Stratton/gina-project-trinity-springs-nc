@@ -748,7 +748,7 @@ function ContactBody() {
         .
       </p>
       <p>
-        {organization.email} is the TSCA email address. Families
+        {organization.applicationEmail} is the TSCA email address. Families
         interested in teaching can note that on the family interest form, and Trinity
         Springs will contact them.
       </p>
