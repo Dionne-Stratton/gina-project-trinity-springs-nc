@@ -22,7 +22,7 @@ export const routes = [
       },
       {
         path: '/about/leadership',
-        title: 'Leadership',
+        title: 'Organization',
         summary: 'How the academy is organized and led.',
       },
     ],
@@ -63,11 +63,6 @@ export const routes = [
         path: '/admissions/tuition',
         title: 'Tuition & Fees',
         summary: 'The cost of the program.',
-      },
-      {
-        path: '/admissions/faq',
-        title: 'FAQ',
-        summary: 'Answers for prospective families.',
       },
     ],
   },
