@@ -120,6 +120,8 @@ function MissionBody() {
       </p>
       <h2>Vision</h2>
       <p>To make homeschooling accessible to families in our community.</p>
+      <h2>Statement of Faith</h2>
+      <FaithBody />
     </>
   )
 }
