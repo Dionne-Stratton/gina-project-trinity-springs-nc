@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { organization } from './contact'
 import Link from './components/Link'
 import { pageMedia } from './photos'
@@ -876,7 +877,62 @@ function FamiliesBody() {
 }
 
 function ContactBody() {
-  return null
+  const [reason, setReason] = useState('question')
+
+  return (
+    <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+      <p id="contact-form-notice">
+        Our contact form is being prepared. Please call, text, or email us using the
+        details below.
+      </p>
+      <div className="contact-field">
+        <label htmlFor="contact-reason">How can we help?</label>
+        <select
+          id="contact-reason"
+          name="reason"
+          value={reason}
+          onChange={(event) => setReason(event.target.value)}
+        >
+          <option value="tour">Schedule a Tour</option>
+          <option value="apply">Apply Now</option>
+          <option value="question">I Have a Question</option>
+        </select>
+      </div>
+      <div className="contact-field">
+        <label htmlFor="contact-name">Full name (required)</label>
+        <input id="contact-name" name="fullName" autoComplete="name" required />
+      </div>
+      <div className="contact-field">
+        <label htmlFor="contact-email">Email (required)</label>
+        <input id="contact-email" name="email" type="email" autoComplete="email" required />
+      </div>
+      <div className="contact-field">
+        <label htmlFor="contact-phone">Phone (optional)</label>
+        <input id="contact-phone" name="phone" type="tel" autoComplete="tel" />
+      </div>
+      {reason === 'tour' && (
+        <fieldset className="contact-students">
+          <legend>Students interested in a tour</legend>
+          <p>We will contact you to arrange a tour based on faculty availability.</p>
+          <div className="contact-field">
+            <label htmlFor="contact-grades">Student grade(s)</label>
+            <input id="contact-grades" name="studentGrades" />
+          </div>
+          <div className="contact-field">
+            <label htmlFor="contact-genders">Student gender(s)</label>
+            <input id="contact-genders" name="studentGenders" />
+          </div>
+        </fieldset>
+      )}
+      <div className="contact-field">
+        <label htmlFor="contact-message">Message (optional)</label>
+        <textarea id="contact-message" name="message" rows="5" />
+      </div>
+      <button type="submit" className="tour-link" disabled aria-describedby="contact-form-notice">
+        Send message
+      </button>
+    </form>
+  )
 }
 
 export default function PageBody({ path, media }) {
