@@ -222,6 +222,15 @@ function ProgramBody() {
         work together and communicate about the students’ work and progress, with the
         hope of providing high-quality academics and fostering the love of learning.
       </p>
+      <h2>Classes and learning plans</h2>
+      <p>
+        Most classes blend grades to allow flexibility for different learning needs:
+        K/1st, 2nd/3rd, 4th, 5th/6th, 7th/8th, and 9th–12th.
+      </p>
+      <p>
+        Class sizes are small, with a maximum of 6–10 students depending on the grade.
+        Lesson plans are provided for each class for five days of instruction.
+      </p>
     </>
   )
 }
@@ -246,8 +255,8 @@ function HybridBody() {
         </a>
       </p>
       <p>
-        K/1st–3rd/4th subjects will be primarily taught by a homeroom teacher, with a
-        few exceptions.
+        Most classes blend grades to allow flexibility for different learning needs:
+        K/1st, 2nd/3rd, 4th, 5th/6th, 7th/8th, and 9th–12th.
       </p>
     </>
   )
@@ -277,8 +286,8 @@ function StagesBody({ media }) {
     <>
       <p>
         These are the three programs named in the 2026–2027 tuition schedule.
-        K/1st–3rd/4th subjects will be primarily taught by a homeroom teacher, with a
-        few exceptions.
+        Most classes blend grades to allow flexibility for different learning needs:
+        K/1st, 2nd/3rd, 4th, 5th/6th, 7th/8th, and 9th–12th.
       </p>
       <div className="photo-row">
         {media.stages.map((stage, index) => (
