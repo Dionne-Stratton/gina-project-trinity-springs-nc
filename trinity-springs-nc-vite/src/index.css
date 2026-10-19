@@ -603,39 +603,69 @@ img {
   }
 }
 
-.prose .enrollment-steps {
+.enrollment-overview {
+  margin-top: 2.5rem;
+  padding: 2.5rem 1.5rem 3rem;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.prose .enrollment-overview h2,
+.prose .enrollment-overview h3,
+.page .enrollment-overview p {
+  color: var(--white);
+}
+
+.prose .enrollment-overview h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.page .enrollment-intro {
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.enrollment-features {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  max-width: none;
-  padding: 0;
-  list-style: none;
-  margin: 1.5rem 0;
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
-.enrollment-steps li {
-  padding: 1.25rem;
-  border: 1px solid var(--line);
+.enrollment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
   background: var(--white);
-}
-
-.enrollment-steps svg {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
   color: var(--navy);
 }
 
-.enrollment-steps h3 {
-  margin-top: 1rem;
+.enrollment-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
-.enrollment-steps p {
-  font-size: 0.95rem;
+.prose .enrollment-features h3 {
+  margin: 1.5rem 0;
+  font-size: 1.65rem;
+  line-height: 1.35;
+}
+
+.page .enrollment-features p {
+  max-width: none;
+  margin: 0;
+  line-height: 1.8;
 }
 
 @media (max-width: 700px) {
-  .prose .enrollment-steps {
+  .enrollment-features {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
   }
 }
