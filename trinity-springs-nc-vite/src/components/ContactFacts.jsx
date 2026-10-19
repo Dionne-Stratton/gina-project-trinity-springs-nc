@@ -11,11 +11,6 @@ export default function ContactFacts() {
         {organization.city}
       </p>
       <p>
-        {organization.mailingStreet}
-        <br />
-        {organization.mailingCity}
-      </p>
-      <p>
         <a href={organization.phoneHref}>{organization.phone}</a>
         <br />
         <a href={`mailto:${organization.applicationEmail}`}>
