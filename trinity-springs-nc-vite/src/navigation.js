@@ -16,11 +16,6 @@ export const routes = [
         summary: 'Why Trinity Springs exists and what it hopes to make possible.',
       },
       {
-        path: '/about/statement-of-faith',
-        title: 'Statement of Faith',
-        summary: 'The shared Christian beliefs of this community.',
-      },
-      {
         path: '/about/leadership',
         title: 'Organization',
         summary: 'How the academy is organized and led.',
