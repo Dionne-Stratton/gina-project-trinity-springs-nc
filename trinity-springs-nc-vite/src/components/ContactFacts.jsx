@@ -21,8 +21,6 @@ export default function ContactFacts() {
         <a href={`mailto:${organization.applicationEmail}`}>
           {organization.applicationEmail}
         </a>
-        <br />
-        <a href={`mailto:${organization.email}`}>{organization.email}</a>
       </p>
       <p>
         <a href={organization.facebook} target="_blank" rel="noreferrer">
