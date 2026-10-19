@@ -102,6 +102,34 @@ function AboutBody() {
       </p>
       <h2>Vision</h2>
       <p>To make homeschooling accessible to families in our community.</p>
+      <h2>A simple and supportive enrollment process</h2>
+      <ol className="enrollment-steps">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
+            <path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8" />
+          </svg>
+          <h3>1. Visit</h3>
+          <p>Tour the campus and meet with the administration for a family interview.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
+            <path d="M14 3H5v18h14V8l-5-5ZM14 3v5h5M8 12h8M8 16h6" />
+          </svg>
+          <h3>2. Apply</h3>
+          <p>Submit your family application for review by the admissions committee.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m7 12 3 3 7-7" />
+          </svg>
+          <h3>3. Enroll</h3>
+          <p>Accepted families receive an enrollment packet with forms and resources.</p>
+        </li>
+      </ol>
+      <p>
+        <Link to="/admissions/process">Explore the admissions process</Link>
+      </p>
     </>
   )
 }
