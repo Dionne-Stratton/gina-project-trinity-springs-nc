@@ -102,34 +102,55 @@ function AboutBody() {
       </p>
       <h2>Vision</h2>
       <p>To make homeschooling accessible to families in our community.</p>
-      <h2>A simple and supportive enrollment process</h2>
-      <ol className="enrollment-steps">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
-            <path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8" />
-          </svg>
-          <h3>1. Visit</h3>
-          <p>Tour the campus and meet with the administration for a family interview.</p>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
-            <path d="M14 3H5v18h14V8l-5-5ZM14 3v5h5M8 12h8M8 16h6" />
-          </svg>
-          <h3>2. Apply</h3>
-          <p>Submit your family application for review by the admissions committee.</p>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" focusable="false">
-            <circle cx="12" cy="12" r="9" />
-            <path d="m7 12 3 3 7-7" />
-          </svg>
-          <h3>3. Enroll</h3>
-          <p>Accepted families receive an enrollment packet with forms and resources.</p>
-        </li>
-      </ol>
-      <p>
-        <Link to="/admissions/process">Explore the admissions process</Link>
-      </p>
+      <section className="enrollment-overview" aria-labelledby="enrollment-overview-title">
+        <h2 id="enrollment-overview-title">A Simple and Supportive Enrollment Process</h2>
+        <p className="enrollment-intro">
+          Our enrollment process is designed to be smooth and supportive, guiding you
+          every step of the way. Whether you’re learning about our programs or applying
+          for financial aid, we’re here to make your experience stress-free.
+        </p>
+        <div className="enrollment-features">
+          <div>
+            <span className="enrollment-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <path d="M8 4h17v23H9a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3M6 23a3 3 0 0 1 3-3h16M16 7v10M12 11h8" />
+              </svg>
+            </span>
+            <h3>Faith-Based Learning</h3>
+            <p>
+              A curriculum that integrates faith and reason, helping students grow
+              both academically and spiritually.
+            </p>
+          </div>
+          <div>
+            <span className="enrollment-icon">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false">
+                <circle cx="16" cy="9" r="5" />
+                <circle cx="5" cy="11" r="3.5" />
+                <circle cx="27" cy="11" r="3.5" />
+                <path d="M9 28a2 2 0 0 1-2-2v-4a9 9 0 0 1 18 0v4a2 2 0 0 1-2 2ZM1 18a5 5 0 0 1 6-2 12 12 0 0 0-3 8H2a2 2 0 0 1-2-2v-1a5 5 0 0 1 1-3ZM31 18a5 5 0 0 0-6-2 12 12 0 0 1 3 8h2a2 2 0 0 0 2-2v-1a5 5 0 0 0-1-3Z" />
+              </svg>
+            </span>
+            <h3>Community-Oriented Environment</h3>
+            <p>
+              We foster a welcoming and supportive school community where families are
+              valued partners.
+            </p>
+          </div>
+          <div>
+            <span className="enrollment-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 3v26M23 8c-2-3-14-4-14 3 0 7 14 3 14 10 0 7-12 6-15 3" />
+              </svg>
+            </span>
+            <h3>Affordable Access</h3>
+            <p>
+              We strive to make TSCA accessible to all families by offering financial
+              aid options and flexible payment plans.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
