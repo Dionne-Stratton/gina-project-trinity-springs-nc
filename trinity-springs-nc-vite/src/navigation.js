@@ -33,6 +33,11 @@ export const routes = [
         summary: 'Classroom instruction on community days and learning at home.',
       },
       {
+        path: '/program/hybrid-a-la-carte',
+        title: 'Hybrid/À la Carte 7–12 Program',
+        summary: 'Two-day hybrid enrollment or individual classes for grades 7–12.',
+      },
+      {
         path: '/program/classical-education',
         title: 'Classical Christian Education',
         summary: 'Christ-centered classical instruction.',
