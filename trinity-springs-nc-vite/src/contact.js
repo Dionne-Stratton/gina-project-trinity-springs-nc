@@ -9,7 +9,6 @@ export const organization = {
   phone: '(910) 876-8952',
   phoneHref: 'tel:+19108768952',
   applicationEmail: 'info@TrinitySpringsNC.org',
-  email: 'trinitysprings2023@gmail.com',
   facebook: 'https://www.facebook.com/share/wxMffPRkanvHWsNa/?mibextid=LQQJ4d',
   facebookLabel: '@TrinitySpringsChristianAcademy',
   instagram: 'https://www.instagram.com/trinitysprings23',
