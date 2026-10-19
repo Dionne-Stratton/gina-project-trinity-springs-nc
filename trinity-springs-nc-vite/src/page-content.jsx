@@ -388,6 +388,9 @@ function ProcessBody() {
         </a>
         .
       </p>
+      <p>
+        <Link to="/contact" className="tour-link">Apply Now</Link>
+      </p>
       <h2>3. Acceptance and enrollment</h2>
       <p>
         Once a child is accepted for enrollment, the family receives an enrollment
@@ -399,6 +402,10 @@ function ProcessBody() {
         and Trinity Springs will contact them with more information. The form also
         asks families to indicate whether they are ready to apply or would like to stay
         connected.
+      </p>
+      <h2>Have questions?</h2>
+      <p>
+        <Link to="/contact" className="tour-link">Ask Us</Link>
       </p>
     </>
   )
