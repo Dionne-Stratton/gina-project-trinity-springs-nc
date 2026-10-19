@@ -268,6 +268,26 @@ function HybridBody() {
   )
 }
 
+function HybridALaCarteBody() {
+  return (
+    <>
+      <p>
+        Families can choose our two-day Hybrid option or enroll in individual à la
+        carte classes such as history, science with labs, grammar, and IEW writing.
+      </p>
+      <p>
+        Students remain registered as homeschoolers with the NC-DNPE, and parents
+        retain full responsibility for their records, testing, and state documentation.
+      </p>
+      <p>
+        All students and their families are welcome to attend morning chapel and any
+        extracurricular activities and events organized by Trinity Springs. Families
+        will also receive detailed booklists with links for easy purchasing.
+      </p>
+    </>
+  )
+}
+
 function ClassicalBody() {
   return (
     <p>
@@ -805,6 +825,9 @@ export default function PageBody({ path, media }) {
       break
     case '/program/hybrid-model':
       copy = <HybridBody />
+      break
+    case '/program/hybrid-a-la-carte':
+      copy = <HybridALaCarteBody />
       break
     case '/program/classical-education':
       copy = <ClassicalBody />
