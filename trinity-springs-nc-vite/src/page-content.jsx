@@ -742,8 +742,9 @@ function FamiliesBody() {
       <ul>
         <li>
           <a href={organization.band} target="_blank" rel="noreferrer">
-            TSCA Band group for families
+            TSCA BAND group for current families
           </a>
+          {' — '}A place for current TSCA families to connect and build community.
         </li>
         <li>
           <a href={organization.familiesFacebook} target="_blank" rel="noreferrer">
