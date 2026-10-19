@@ -250,6 +250,16 @@ function ProgramBody() {
         planned instruction, preferring books, conversation, and hands-on learning to
         take priority over digital instruction.
       </p>
+      <h2>Curriculum Map</h2>
+      <p>
+        <a
+          href="https://docs.google.com/document/d/1wYFBZZpQ1O9N-W8Rjy_ZLeT3A90S67dfiN3JPGEyEuQ/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View the TSCA Curriculum Map
+        </a>
+      </p>
     </>
   )
 }
